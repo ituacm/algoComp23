@@ -9,25 +9,25 @@ Remember, since Efe is a terrible player he doesn't even move. Help Daria to kil
 ## Input Format
 
 First line contains three integers
-~m~, ~n~ and ~v~.
-- ~m~ is the height of the spaceship.
-- ~n~ is the widht of the spaceship.
-- ~v~ is the number of vents.
+$m$, $n$ and $v$.
+- $m$ is the height of the spaceship.
+- $n$ is the widht of the spaceship.
+- $v$ is the number of vents.
 
-The next ~m~ lines contain ~n~ ones and zeros. Ones are the corridors and zeros are the walls. Imposter can't go through walls. It is guaranteed that top left and bottom right of the spaceship are corridors.
+The next $m$ lines contain $n$ ones and zeros. Ones are the corridors and zeros are the walls. Imposter can't go through walls. It is guaranteed that top left and bottom right of the spaceship are corridors.
 
-The next ~v~ lines contain ~4~ integers. Entrance's vertical position, entrance's horizontal positon, exit's vertical position, exit's horizontal position.  It is guaranteed that all the vent entrances and exits are built on corridors.
+The next $v$ lines contain $4$ integers. Entrance's vertical position, entrance's horizontal positon, exit's vertical position, exit's horizontal position.  It is guaranteed that all the vent entrances and exits are built on corridors.
 
 ## Constraints
 
-- ~1 \leq m \leq 10^3~
-- ~1 \leq n \leq 10^3~
-- ~1 \leq v \leq 10^2~
-- ~c_{ij}\in\{0,1\}~, where ~i\in\left[0,m-1\right]~ and ~j\in\left[0,n-1\right]~.
+- $1 \leq m \leq 10^3$
+- $1 \leq n \leq 10^3$
+- $1 \leq v \leq 10^2$
+- $c_{ij}\in\{0,1\}$, where $i\in\left[0,m-1\right]$ and $j\in\left[0,n-1\right]$.
 
 ## Output Format
 
-One integer in mod ~10^9+7~ denoting the number of different ways to go to the bottom right of the spaceship from the top left.
+One integer in mod $10^9+7$ denoting the number of different ways to go to the bottom right of the spaceship from the top left.
 
 ### Sample Input
 

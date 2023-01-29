@@ -10,22 +10,22 @@ Ceren, CEO of the network cable company, offers some fixed cost cables to Hacer.
 
 ## Input Format
 
-The first line consists of two integers ~n~ and ~m~ where ~n~ is the number of Pepperson offices and ~m~ is total number of network cables among them.
+The first line consists of two integers $n$ and $m$ where $n$ is the number of Pepperson offices and $m$ is total number of network cables among them.
 
-The following ~m~ lines consist of three integers ~o_i~, ~o_j~ and ~c~ where ~c~ is the maintenance cost between offices ~o_i~ and ~o_j~.
+The following $m$ lines consist of three integers $o_i$, $o_j$ and $c$ where $c$ is the maintenance cost between offices $o_i$ and $o_j$.
 
-Next line consists of one integer ~q~ which is the number of offers from Ceren.
+Next line consists of one integer $q$ which is the number of offers from Ceren.
 
-Following ~q~ lines include one integer ~fc~ denoting the fixed maintenance cost of new technology network cables.
+Following $q$ lines include one integer $fc$ denoting the fixed maintenance cost of new technology network cables.
 
 ## Constraints
 
-- ~1 \leq n \leq 10^{5}~
-- ~1 \leq m \leq 2\times10^{5}~
-- ~0 \leq o_i, o_j \lt n~
-- ~o_i \neq o_j~
-- ~1 \leq c, fc \leq 10^{4}~
-- ~1 \leq q \leq 10^{5}~
+- $1 \leq n \leq 10^{5}$
+- $1 \leq m \leq 2\times10^{5}$
+- $0 \leq o_i, o_j \lt n$
+- $o_i \neq o_j$
+- $1 \leq c, fc \leq 10^{4}$
+- $1 \leq q \leq 10^{5}$
 
 ## Output Format
 

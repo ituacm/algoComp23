@@ -6,15 +6,15 @@ Emre defines the number of words that hold this property as **Verbum Profundum**
 
 ## Input Format
 
-First line consists of one integer ~n~ which is the number of words Alp knows.
+First line consists of one integer $n$ which is the number of words Alp knows.
 
-Next ~n~ lines consist of one string each, ~s~ , which consists of lowercase English letters.
+Next $n$ lines consist of one string each, $s$ , which consists of lowercase English letters.
 
 ## Constraints
 
-~1 \leq n,\ (length\ of\ s)~
+$1 \leq n,\ (length\ of\ s)$
 
-~(max\ length\ of\ s) * n \leq 10^6~
+$(max\ length\ of\ s) * n \leq 10^6$
 
 ## Output Format
 

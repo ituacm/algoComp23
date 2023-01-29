@@ -13,21 +13,21 @@ When the waiters take away the food in the middle of the table, the coder whose 
 If, at any point, there can be two or more coders who can have their food with the same id, choose the coder with the smaller index.
 
 ## Input format:
-First line consists of ~3~ integers ~n~, ~m~ and ~c~ which are the number of coders, number of waiter's suggestions and the id of initial food in the middle of the table respectively.
+First line consists of $3$ integers $n$, $m$ and $c$ which are the number of coders, number of waiter's suggestions and the id of initial food in the middle of the table respectively.
 
-Second line contains ~n~ integers denoting id's of coders' foods as ~f_1~, ~f_2~, ..., ~f_n~ where ~f_i~ is ~i~th coder's food.
+Second line contains $n$ integers denoting id's of coders' foods as $f_1$, $f_2$, ..., $f_n$ where $f_i$ is $i$th coder's food.
 
-Following ~m~ lines contain ~2~ integers ~t~ and ~f~ which are query type and new food's id respectively. For ~t = 1~ queries, put given new food to the middle of the table. For ~t = 2~ queries, pick up the food from the middle of the table.
+Following $m$ lines contain $2$ integers $t$ and $f$ which are query type and new food's id respectively. For $t = 1$ queries, put given new food to the middle of the table. For $t = 2$ queries, pick up the food from the middle of the table.
 
 ## Constraints
 
-~1 \leq n \leq 10^5~
+$1 \leq n \leq 10^5$
 
-~1 \leq m \leq 5\times10^4~
+$1 \leq m \leq 5\times10^4$
 
-~0 \leq c, f_i \leq 10^6~
+$0 \leq c, f_i \leq 10^6$
 
-~t \in \{1, 2\}~
+$t \in \{1, 2\}$
 
 ## Output Format:
 For each query type 1, print the id of the food that is removed from the table and the index of the people (indexes starts from 1 goes to n).

@@ -10,22 +10,22 @@ Ceren, CEO of the network cable company, offers some fixed latency cables to Hac
 
 ## Input Format
 
-The first line consists of two integers ~n~ and ~m~ where ~n~ is the number of Raider's offices and ~m~ is the total number of network cables among them.
+The first line consists of two integers $n$ and $m$ where $n$ is the number of Raider's offices and $m$ is the total number of network cables among them.
 
-The following ~m~ lines consist of three integers ~o_i~, ~o_j~ and ~l~ where ~l~ is the length and latency of the cable between offices ~o_i~ and ~o_j~.
+The following $m$ lines consist of three integers $o_i$, $o_j$ and $l$ where $l$ is the length and latency of the cable between offices $o_i$ and $o_j$.
 
-Next line consists of one integer ~q~ which is the number of offers from Ceren.
+Next line consists of one integer $q$ which is the number of offers from Ceren.
 
-Following ~q~ lines include one integer ~fl~ denoting the fixed latency cost of new technology network cables.
+Following $q$ lines include one integer $fl$ denoting the fixed latency cost of new technology network cables.
 
 ## Constraints
 
-- ~1 \leq n \leq 10^{4}~
-- ~1 \leq m \leq 2\times10^{5}~
-- ~0 \leq o_i, o_j \lt n~
-- ~o_i \neq o_j~
-- ~1 \leq l, fl \leq 10^{4}~
-- ~1 \leq q \leq 10^{4}~
+- $1 \leq n \leq 10^{4}$
+- $1 \leq m \leq 2\times10^{5}$
+- $0 \leq o_i, o_j \lt n$
+- $o_i \neq o_j$
+- $1 \leq l, fl \leq 10^{4}$
+- $1 \leq q \leq 10^{4}$
 
 ## Output Format
 
@@ -55,8 +55,8 @@ For every offer from Ceren, print one line with one integer denoting the network
 
 <img src="https://contest.ituacm.com/static/images/questions/area44-2-graph.png" width="36%"><img src="https://contest.ituacm.com/static/images/questions/area44-2-mst.png" width="36%">
 
-In this given network, overall latency is the sum of the latency between all office pairs which is ~74~ (for example, latency between office ~0~ and office ~2~ is ~9 + 8 + 5 = 22~).
+In this given network, overall latency is the sum of the latency between all office pairs which is $74$ (for example, latency between office $0$ and office $2$ is $9 + 8 + 5 = 22$).
 
-If we replaced the cable with length ~4~ with an offer of ~8~, overall latency would be ~58~.
+If we replaced the cable with length $4$ with an offer of $8$, overall latency would be $58$.
 
-If we replaced the cable with length ~7~ with an offer of ~9~, overall latency would be ~68~.
+If we replaced the cable with length $7$ with an offer of $9$, overall latency would be $68$.

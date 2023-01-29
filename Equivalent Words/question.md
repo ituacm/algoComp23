@@ -10,23 +10,23 @@ Can you fulfill Murat's request for Omer and give him a rest while he is watchin
 
 ## Input Format
 
-- First line contains ~2~ space separated integers ~m~ and ~n~ where ~m~ is the length of the word list, ~n~ is the length of the query list.
-- Following ~m~ lines contain each member of Omer's list where each line has one single string.
-- Following ~n~ lines contain each member of Murat's list where each line has one single string.
+- First line contains $2$ space separated integers $m$ and $n$ where $m$ is the length of the word list, $n$ is the length of the query list.
+- Following $m$ lines contain each member of Omer's list where each line has one single string.
+- Following $n$ lines contain each member of Murat's list where each line has one single string.
 
 It is guaranteed that all strings consist of lowercase English letters.
 
 ## Constraints
 
-~1 \leq m \leq 10^5 ~
+$1 \leq m \leq 10^5 $
 
-~1 \leq n \leq 10^4 ~
+$1 \leq n \leq 10^4 $
 
-~1 \leq w \leq 20~ where ~w~ is the length of each word.
+$1 \leq w \leq 20$ where $w$ is the length of each word.
 
 ## Output Format
 
-For each query from Murat, print ~1~ line containing the indexes of the given word's equivalents in Omer's list. Indexes must be printed in ascending order.
+For each query from Murat, print $1$ line containing the indexes of the given word's equivalents in Omer's list. Indexes must be printed in ascending order.
 
 ## Sample Input 1
 

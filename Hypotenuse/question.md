@@ -19,11 +19,11 @@ At the bottom, it says "I can only return if you manage to solve this.". Try as 
 Surely, he didn't have computational power. It was pretty tiring and led to miscalculated results over and over again. We couldn't say let's help him out for known reasons. Still, we hope that they will meet in the afterlife.
 
 ## Input Format:
-Two integers ~l~, ~r~ in one line
+Two integers $l$, $r$ in one line
 
 ## Constraints:
 
-- ~1 \leq l \leq r \leq 10^7~
+- $1 \leq l \leq r \leq 10^7$
 
 ## Output Format:
 One integer denoting the count of numbers satisfying the given rule
