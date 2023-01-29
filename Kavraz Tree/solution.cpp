@@ -1,11 +1,3 @@
-/*
-Çözümü yukarıdan aşağıya bulmak yerine aşağıdan yukarıya doğru buluyoruz.
-Bunu yaparken de her node için child'larının derinliklerine göre karar veriyoruz.
-Child levelleri consecutive gitmeleri gerektiği için sort ve for loop kullandık.
-En sonunda print ettiği level mi yoksa -1 mi printletilmeli tartışılabilir.
-Tek node'u olan tree için 0 basıyor şu an. (edge case)
-İki node'u olan tree için 2 basıyor.
-*/
 #include <bits/stdc++.h>
 
 using namespace std;
