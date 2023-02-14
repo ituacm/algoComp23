@@ -8,7 +8,7 @@ long long parent(long long node, vector<long long>& ancestor) {
     return ancestor[node] = parent(ancestor[node], ancestor);
 }
 
-void make_union(long long node1, long long node2, vector<long long>& ancestor) {
+void makeUnion(long long node1, long long node2, vector<long long>& ancestor) {
     long long p1 = parent(node1, ancestor);
     long long p2 = parent(node2, ancestor);
     ancestor[p1] = p2;
@@ -23,11 +23,11 @@ int main() {
     cin.tie(NULL);
 
     // get input to a edge list
-    long long node_count, edge_count;
-    cin >> node_count >> edge_count;
+    long long nodeCount, edgeCount;
+    cin >> nodeCount >> edgeCount;
 
-    vector<vector<long long>> edgeList(edge_count);
-    for (long long i = 0; i < edge_count; i++) {
+    vector<vector<long long>> edgeList(edgeCount);
+    for (long long i = 0; i < edgeCount; i++) {
         long long src, dest, cost;
         cin >> src >> dest >> cost;
         edgeList[i] = {cost, src, dest};
@@ -37,49 +37,49 @@ int main() {
     sort(edgeList.begin(), edgeList.end());
 
     // initalize union find set
-    vector<long long> ancestor(node_count);
+    vector<long long> ancestor(nodeCount);
 
     // make everybody their own parent
     iota(ancestor.begin(), ancestor.end(), 0);
 
     // find the mst costs
-    vector<long long> mst_results;
+    vector<long long> mstResults;
     for (auto& edge : edgeList) {
         if (!find(edge[1], edge[2], ancestor)) {
-            make_union(edge[1], edge[2], ancestor);
-            mst_results.push_back(edge[0]);
+            makeUnion(edge[1], edge[2], ancestor);
+            mstResults.push_back(edge[0]);
         }
     }
 
     // get the queries
-    long long query_count;
-    cin >> query_count;
-    vector<long long> query_list(query_count);
+    long long queryCount;
+    cin >> queryCount;
+    vector<long long> queryList(queryCount);
 
-    for (long long i = 0; i < query_count; i++) {
-        cin >> query_list[i];
+    for (long long i = 0; i < queryCount; i++) {
+        cin >> queryList[i];
     }
 
     // to use in binary search
-    sort(mst_results.begin(), mst_results.end());
+    sort(mstResults.begin(), mstResults.end());
 
     // prefix sum for fast summation
-    vector<long long> prefix(node_count - 1, 0);
+    vector<long long> prefix(nodeCount - 1, 0);
 
-    for (long long i = 0; i < node_count - 1; i++) {
+    for (long long i = 0; i < nodeCount - 1; i++) {
         if (i) {
-            prefix[i] = mst_results[i] + prefix[i - 1];
+            prefix[i] = mstResults[i] + prefix[i - 1];
         } else {
-            prefix[i] = mst_results[i];
+            prefix[i] = mstResults[i];
         }
     }
 
     // print the binary search results
-    for (long long i = 0; i < query_count; i++) {
-        long long index = upper_bound(mst_results.begin(), mst_results.end(), query_list[i]) - mst_results.begin();
+    for (long long i = 0; i < queryCount; i++) {
+        long long index = upper_bound(mstResults.begin(), mstResults.end(), queryList[i]) - mstResults.begin();
         long long ans = 0;
         if (index) ans += prefix[index - 1];
-        ans += (node_count - 1 - index) * query_list[i];
+        ans += (nodeCount - 1 - index) * queryList[i];
         cout << ans << "\n";
     }
 

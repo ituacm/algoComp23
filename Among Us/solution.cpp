@@ -26,6 +26,12 @@ int main() {
             grid[i][j]--;
         }
     }
+    // If starting cell or ending cell is blocked, the answer will be 0
+    if (grid[0][0] == -1 || grid[r - 1][c - 1] == -1) {
+        cout << "0\n";
+        return 0;
+    }
+
     // Initialize starting cell as 1
     grid[0][0] = 1;
 
@@ -37,7 +43,7 @@ int main() {
         vents[row2 * c + col2].push_back(row1 * c + col1);
     }
 
-    // iterate all cells
+    // iterate over all cells
     // 0     1     ... (c - 1)
     // c  (c + 1)  ... (2c - 1)
     //             ...
@@ -54,7 +60,7 @@ int main() {
             grid[row][col] += grid[row - 1][col];
             grid[row][col] %= MOD;
         }
-        // if there is a left cell and if it is unblocked add it
+        // if there is a cell at left and if it is unblocked add it
         if (col > 0 && grid[row][col - 1] != -1) {
             grid[row][col] += grid[row][col - 1];
             grid[row][col] %= MOD;
@@ -63,9 +69,9 @@ int main() {
         // take vent entrances which are ended with cell i = [row, col]
         // add the total ways of reaching entrance to the exit
         for (auto vent : vents[i]) {
-            int vent_col = vent % c;
-            int vent_row = vent / c;
-            grid[row][col] += grid[vent_row][vent_col];
+            int ventCol = vent % c;
+            int ventRow = vent / c;
+            grid[row][col] += grid[ventRow][ventCol];
             grid[row][col] %= MOD;
         }
     }
