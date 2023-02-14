@@ -26,8 +26,8 @@ int main() {
             grid[i][j]--;
         }
     }
-    // If starting cell is blocked, the answer will be 0
-    if (grid[0][0] == -1) {
+    // If starting cell or ending cell is blocked, the answer will be 0
+    if (grid[0][0] == -1 || grid[r - 1][c - 1] == -1) {
         cout << "0\n";
         return 0;
     }
