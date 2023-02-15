@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 #define MOD (1000000007)
 
@@ -11,21 +12,18 @@ using namespace std;
 class SegmentTree {
     vector<long long> tree;
 
-public:
-    SegmentTree(long long n){
-        tree.resize(n*4 + 5);
+   public:
+    SegmentTree(long long n) {
+        tree.resize(n * 4 + 5);
     }
 
-    void build(long long ind, long long l, long long r, vector<long long>& nums){
+    void build(long long ind, long long l, long long r, vector<long long>& nums) {
+        if (l > r) return;
 
-        if (l > r)
-            return;
-
-        if (l == r)
+        if (l == r) {
             this->tree[ind] = nums[l];
-
-        else {
-            long long mid = (l+r) / 2;
+        } else {
+            long long mid = (l + r) / 2;
             build(ind * 2, l, mid, nums);
             build(ind * 2 + 1, mid + 1, r, nums);
 
@@ -33,16 +31,13 @@ public:
         }
     }
 
-    void update(long long ind, long long l, long long r, long long x, long long val){
+    void update(long long ind, long long l, long long r, long long x, long long val) {
+        if (l > r) return;
 
-        if (l > r)
-            return;
+        if (l > x || r < x) return;
 
-        if (l > x || r < x)
-            return;
-        if (l == x && r == x){
+        if (l == x && r == x) {
             this->tree[ind] += val;
-            // cout << "Update: " << this->tree[ind] << "\n";
             return;
         }
 
@@ -53,9 +48,7 @@ public:
         this->tree[ind] = this->tree[ind * 2] + this->tree[ind * 2 + 1];
     }
 
-    long long query(long long ind, long long l, long long r, long long target_l, long long target_r){
-
-
+    long long query(long long ind, long long l, long long r, long long target_l, long long target_r) {
         if (target_r < l || r < target_l)
             return 0;
 
@@ -64,89 +57,73 @@ public:
 
         long long mid = (l + r) / 2;
         return query(ind * 2, l, mid, target_l, target_r) +
-            query(ind * 2 + 1, mid + 1, r, target_l, target_r);
-    }
-
-    void printTree(long long size){
-        for (long long i = 1; i <= size * 2; i++)
-            cout << tree[i] << " ";
-        cout << "\n";
+               query(ind * 2 + 1, mid + 1, r, target_l, target_r);
     }
 };
 
-void printVector(vector<long long>& v){
-    for (long long itr: v){
-        cout << itr << " ";
-    } cout << "\n";
-}
-
-int main(){
-
+int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
+
     long long n, m, k;
     cin >> n >> m >> k;
-        
-    // read the input long longo a vector
+
+    // read the input long long a vector
     vector<long long> happinessScores(n);
-    for (long long i = 0; i < n; i++){
+    for (long long i = 0; i < n; i++) {
         cin >> happinessScores[i];
     }
 
     vector<SegmentTree*> segmentTrees(k);
-    
-    for (long long i = 0; i < k; i++){
+
+    for (long long i = 0; i < k; i++) {
         segmentTrees[i] = new SegmentTree(n / k);
     }
 
     vector<vector<long long>> separatedNumbers(k);
-    long long prefix_sum = 0;
-    for (long long i = 0; i < k; i++){
-        prefix_sum += happinessScores[i];
+    long long prefixSum = 0;
+    for (long long i = 0; i < k; i++) {
+        prefixSum += happinessScores[i];
     }
 
-    for (long long i = k; i < n; i++){
+    for (long long i = k; i < n; i++) {
         long long effect = (i / k) % 2 == 1 ? 1 : -1;
-        separatedNumbers[(i - k) % k].push_back(effect * prefix_sum);
-        prefix_sum += happinessScores[i] - happinessScores[i - k];
+        separatedNumbers[(i - k) % k].push_back(effect * prefixSum);
+        prefixSum += happinessScores[i] - happinessScores[i - k];
     }
 
     long long effect = (n / k) % 2 == 1 ? 1 : -1;
-    separatedNumbers[(n - k) % k].push_back(effect * prefix_sum);
+    separatedNumbers[(n - k) % k].push_back(effect * prefixSum);
 
-    for (long long i = 0; i < k; i++){
+    for (long long i = 0; i < k; i++) {
         segmentTrees[i]->build(1, 0, separatedNumbers[i].size() - 1, separatedNumbers[i]);
     }
 
-    for (long long i = 0; i < m; i++){
+    for (long long i = 0; i < m; i++) {
+        long long qType;
+        cin >> qType;
+        if (qType == 1) {
+            long long index, newValue;
+            cin >> index >> newValue;
 
-        // update operation
-        long long qType; cin >> qType; 
-        if (qType == 1){
-            long long index, new_value;
-            cin >> index >> new_value;
-            
             // update array at first
-            long long diff = new_value - happinessScores[index];
-            happinessScores[index] = new_value;
+            long long diff = newValue - happinessScores[index];
+            happinessScores[index] = newValue;
 
-            for (long long j = 0; j < k; j++){
-                if (index >= j){
+            for (long long j = 0; j < k; j++) {
+                if (index >= j) {
                     long long updateIndex = (index - j) / k;
                     long long effect = (index - j) % (2 * k) >= k ? -1 : 1;
-                    if (updateIndex < separatedNumbers[j].size()){
+                    if (updateIndex < separatedNumbers[j].size()) {
                         segmentTrees[j]->update(1, 0, separatedNumbers[j].size() - 1, updateIndex, effect * diff);
                     }
                 }
             }
+        } else {
+            long long l, r;
+            cin >> l >> r;
 
-        }
-        else if (qType == 2) {
-
-            long long l, r; cin >> l >> r;
-
-            // instead of l, l-1 and instead of r, r-1 for the segment tree operations 
+            // instead of l, l-1 and instead of r, r-1 for the segment tree operations
             // for example the calculation of remainingSum doesn't change except mod part
             long long new_l = (l - (l % k)) / k;
             long long new_r = (r - ((r - (l % k)) % k)) / k - 1;
@@ -154,21 +131,17 @@ int main(){
             long long remainingSum = 0;
             for (long long j = r - ((r - (l % k)) % k); j <= r; j++)
                 remainingSum += happinessScores[j];
-            
+
             if (((r - l) / k) % 2 == 1)
                 remainingSum = -remainingSum;
-            
+
             long long querySum = segmentTrees[l % k]->query(1, 0, separatedNumbers[l % k].size() - 1, new_l, new_r);
-            
+
             if (new_l % 2 == 1)
                 querySum = -querySum;
 
             cout << (((remainingSum + querySum) % MOD) + MOD) % MOD << "\n";
-
-        }
-        else {
-            cerr << "Hoooop! Error var hoca!";
-            return 1;
         }
     }
+    return 0;
 }
