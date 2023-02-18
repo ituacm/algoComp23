@@ -28,6 +28,7 @@ This repository is created to present algoComp'23 questions and solutions.
 | 1 | Black, White and Hexagonal | [Question](./Black,%20White%20and%20Hexagonal/README.md) | [Solution](./Black,%20White%20and%20Hexagonal/solution.cpp) |
 | 2 | BLG 433E                   | [Question](./BLG%20433E/README.md)                       | [Solution](./BLG%20433E/solution.cpp)                       |
 | 3 | Bridge Construction        | [Question](./Bridge%20Construction/README.md)            | [Solution](./Bridge%20Construction/solution.cpp)            |
+|   |                            |                                                          | [Solution](./Bridge%20Construction/solution1.cpp)           |
 | 4 | Combined and Modified      | [Question](./Combined%20and%20Modified/README.md)        | [Solution](./Combined%20and%20Modified/solution.cpp)        |
 | 5 | God Mode On                | [Question](./God%20Mode%20On/README.md)                  | [Solution](./God%20Mode%20On/solution.cpp)                  |
 | 6 | Happy Walk                 | [Question](./Happy%20Walk/README.md)                     | [Solution](./Happy%20Walk/solution.cpp)                     |
