@@ -35,7 +35,7 @@ class Table {
 
         whoHasWhat[top.second] = this->center;
         smallest.push({this->center, top.second});
-        biggest.push({this->center, -top.second});  // TODO: correct second element
+        biggest.push({this->center, -top.second});
 
         this->center = newElement;
 
