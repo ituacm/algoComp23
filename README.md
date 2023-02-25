@@ -27,10 +27,10 @@ This repository is created to present algoComp'23 questions and solutions.
 |---|----------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | 1 | Black, White and Hexagonal | [Question](./Final%20Round/Black,%20White%20and%20Hexagonal/README.md) | [Solution](./Final%20Round/Black,%20White%20and%20Hexagonal/solution.cpp) |
 | 2 | BLG 433E                   | [Question](./Final%20Round/BLG%20433E/README.md)                       | [Solution](./Final%20Round/BLG%20433E/solution.cpp)                       |
-| 3 | Bridge Construction        | [Question](./Final%20Round/Bridge%20Construction/README.md)            | [Solution](./Final%20Round/Bridge%20Construction/solution.cpp)            |
+| 3 | Bridge Construction        | [Question](./Final%20Round/Bridge%20Construction/README.md)            | [Solution1](./Final%20Round/Bridge%20Construction/solution.cpp) [Solution2](./Final%20Round/Bridge%20Construction/solution1.cpp)            |
 | 4 | Combined and Modified      | [Question](./Final%20Round/Combined%20and%20Modified/README.md)        | [Solution](./Final%20Round/Combined%20and%20Modified/solution.cpp)        |
 | 5 | God Mode On                | [Question](./Final%20Round/God%20Mode%20On/README.md)                  | [Solution](./Final%20Round/God%20Mode%20On/solution.cpp)                  |
 | 6 | Happy Walk                 | [Question](./Final%20Round/Happy%20Walk/README.md)                     | [Solution](./Final%20Round/Happy%20Walk/solution.cpp)                     |
 | 7 | Nim Camp                   | [Question](./Final%20Round/Nim%20Camp/README.md)                       | [Solution](./Final%20Round/Nim%20Camp/solution.cpp)                       |
-| 8 | Octagonal Prism            | [Question](./Final%20Round/Octagonal%20Prism/README.md)                | [Solution1](./Final%20Round/Octagonal%20Prism/solution.cpp) [Solution2](./Final%20Round/Octagonal%20Prism/solution1.cpp) |
+| 8 | Octagonal Prism            | [Question](./Final%20Round/Octagonal%20Prism/README.md)                | [Solution](./Final%20Round/Octagonal%20Prism/solution.cpp) |
 | 9 | Sweep Rowing               | [Question](./Final%20Round/Sweep%20Rowing/README.md)                   | [Solution](./Final%20Round/Sweep%20Rowing/solution.cpp)                   |
