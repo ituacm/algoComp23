@@ -4,6 +4,8 @@ Due to global warming, climate is very unstable and not normal. Istanbul is one 
 
 At this situation, the bravest persons of ITU which are Fatih and Omer, decide to help people. To do so, Fatih and Omer decide to use their deep knowledge about making bridges to connect lands. Their strategy is connecting lands with a bridge and making the largest possible land to help more people. They are masters of bridge construction; so their bridges can be built anywhere, even in the middle of flooded areas. But their resources are limited, therefore they can construct only one bridge using at most $3$ adjacent cells (adjacency should be considered only in horizontal and vertical directions). Can you help Fatih and Omer to find the largest possible land area?
 
+NOTE: This question has two valid solutions. You can find them within the same folder.
+
 ---
 
 ## Input Format
