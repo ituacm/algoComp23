@@ -32,5 +32,5 @@ This repository is created to present algoComp'23 questions and solutions.
 | 5 | God Mode On                | [Question](./Final%20Round/God%20Mode%20On/README.md)                  | [Solution](./Final%20Round/God%20Mode%20On/solution.cpp)                  |
 | 6 | Happy Walk                 | [Question](./Final%20Round/Happy%20Walk/README.md)                     | [Solution](./Final%20Round/Happy%20Walk/solution.cpp)                     |
 | 7 | Nim Camp                   | [Question](./Final%20Round/Nim%20Camp/README.md)                       | [Solution](./Final%20Round/Nim%20Camp/solution.cpp)                       |
-| 8 | Octagonal Prism            | [Question](./Final%20Round/Octagonal%20Prism/README.md)                | [Solution](./Final%20Round/Octagonal%20Prism/solution.cpp)                |
+| 8 | Octagonal Prism            | [Question](./Final%20Round/Octagonal%20Prism/README.md)                | [Solution1](./Final%20Round/Octagonal%20Prism/solution.cpp) [Solution2](./Final%20Round/Octagonal%20Prism/solution1.cpp) |
 | 9 | Sweep Rowing               | [Question](./Final%20Round/Sweep%20Rowing/README.md)                   | [Solution](./Final%20Round/Sweep%20Rowing/solution.cpp)                   |
