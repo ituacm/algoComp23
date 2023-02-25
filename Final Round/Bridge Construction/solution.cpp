@@ -1,3 +1,5 @@
+// In this solution, the bridge is constructed to only sea cells.
+
 #include <bits/stdc++.h>
 
 using namespace std;
