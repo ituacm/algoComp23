@@ -2,6 +2,13 @@
 
 This repository is created to present algoComp'23 questions and solutions. 
 
+Made with 💙 by **ITU ACM** 
+
+Fallow us on
+- [Instagram](https://www.instagram.com/ituacmsc)
+- [Twitter](https://www.twitter.com/ituacmsc)
+- [LinkedIn](https://www.linkedin.com/company/ituacmsc/)
+
 ## Qualification Round Questions
 
 | #  | Name             |                                                                             |                                                                                |
